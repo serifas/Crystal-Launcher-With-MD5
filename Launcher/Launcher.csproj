@@ -9,7 +9,7 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>UpdateTest</RootNamespace>
-    <AssemblyName>Crystal Refuge</AssemblyName>
+    <AssemblyName>Prime Launcher</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -82,7 +82,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\wow.exe" />
+    <ProjectReference Include="..\TutUpdater\CrystalUpdater.csproj">
+      <Project>{55845CBE-0F5E-4ECF-B497-F139843D3D6E}</Project>
+      <Name>CrystalUpdater</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\minimize_h.png" />
     <None Include="Resources\lb_fill.png" />
     <None Include="Resources\lb_empty_frame.png" />
@@ -93,12 +98,6 @@
     <None Include="Resources\button_h.png" />
     <Content Include="crystal.ico" />
     <None Include="Resources\button_h.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Updater\CrystalUpdater.csproj">
-      <Project>{55845cbe-0f5e-4ecf-b497-f139843d3d6e}</Project>
-      <Name>CrystalUpdater</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

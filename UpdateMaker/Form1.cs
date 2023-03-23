@@ -34,7 +34,6 @@ using System.IO;
 using CrystalUpdater.Data;
 using System.Text.RegularExpressions;
 using System.Security.Cryptography;
-
 namespace UpdateMaker
 {
     public partial class Form1 : Form
@@ -51,19 +50,56 @@ namespace UpdateMaker
 
         private void btnAdd_Click(object sender, EventArgs e)
         { 
-            
+            string[] files = Directory.GetFiles(@"./Files/", "*", SearchOption.AllDirectories);
+           
+            foreach (var file in files)
+            {
+                FileInfo fi = new FileInfo(file);
+                var size = fi.Length;
+                string fullPath = fi.FullName.Split(new string[] { "Files" }, StringSplitOptions.None)[1];
+                string finalPath = fullPath.Split(new string[] { fi.Name }, StringSplitOptions.None)[0];
+                string checksumMd5 = GetHashFromFile(file);
+                ListViewItem lvItem = new ListViewItem(new String[] { fi.Name, checksumMd5.ToString(), finalPath });
+                listView1.Items.Add(lvItem);
+            }
            
         }
 
-      
+        public static string GetHashFromFile(string fileName)
+        {
+            int buffersize = 65536;
+            using (var md5 = MD5.Create())
+            {
+                using (var stream = new FileStream(fileName, FileMode.Open, FileAccess.Read, FileShare.Read, buffersize))
+                {
+                    var block = new byte[buffersize];
+                    int length = 0;
+                    Int64 filesize = stream.Length;
+                    Int64 bytesread = 0;
+                    length = stream.Read(block, 0, buffersize);
+                    bytesread += length;
+                    while (length == block.Length)
+                    {
+                        md5.TransformBlock(block, 0, length, null, 0);
+                        length = stream.Read(block, 0, buffersize);
+                        bytesread += length;
+                    }
+                    md5.TransformFinalBlock(block, 0, length);
+                    bytesread += length;
+                }
+                var hash = md5.Hash;
+                return BitConverter.ToString(hash).Replace("-", "").ToLowerInvariant();
+            }
+        }
+       
+
+
         private void btnGenerate_Click(object sender, EventArgs e)
         {
             UpdateSaveFile file = new UpdateSaveFile(txtVersion.Text);
-
             foreach (ListViewItem item in listView1.Items)
             {
-                
-                file.UpdateFileCollection.Add(new UpdateFileInfo(item.SubItems[0].Text, item.SubItems[1].Text, item.SubItems[2].Text, item.SubItems[3].Text));
+                file.UpdateFileCollection.Add(new UpdateFileInfo(item.SubItems[0].Text, item.SubItems[1].Text, item.SubItems[2].Text));
             }
             BinaryFormatter bf = new BinaryFormatter();
             FileStream bfStream = File.Open(@".\UpdateInfo.dat", FileMode.OpenOrCreate, FileAccess.ReadWrite);
@@ -73,23 +109,7 @@ namespace UpdateMaker
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            string[] files = Directory.GetFiles(@"./Files/", "*", SearchOption.AllDirectories);
 
-            foreach (var file in files)
-            {
-                FileInfo fi = new FileInfo(file);
-
-
-                if (fi.Exists)
-                {
-                    string sizeFormat = Utils.FileSizeFormatter.FormatSize(fi.Length);
-                    string fullPath = fi.FullName.Split(new string[] { "Files" }, StringSplitOptions.None)[1];
-                    string finalPath = fullPath.Split(new string[] { fi.Name }, StringSplitOptions.None)[0];
-                    string md5 = Utils.checkMD5(@"." +finalPath + fi.Name);
-                    ListViewItem lvItem = new ListViewItem(new String[] { fi.Name, sizeFormat.ToString(), finalPath, md5});
-                    listView1.Items.Add(lvItem);
-                }
-            }
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)

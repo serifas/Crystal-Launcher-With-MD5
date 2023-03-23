@@ -1,0 +1,8 @@
+C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\TutUpdater\bin\Debug\Prime Updater.dll
+C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\TutUpdater\bin\Debug\Prime Updater.pdb
+C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\TutUpdater\obj\Debug\CrystalUpdater.Properties.Resources.resources
+C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\TutUpdater\obj\Debug\CrystalUpdater.UI.frmUpdater.resources
+C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\TutUpdater\obj\Debug\CrystalUpdater.csproj.GenerateResource.cache
+C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\TutUpdater\obj\Debug\CrystalUpdater.csproj.CoreCompileInputs.cache
+C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\TutUpdater\obj\Debug\Prime Updater.dll
+C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\TutUpdater\obj\Debug\Prime Updater.pdb

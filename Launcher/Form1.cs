@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-using System.IO;
 
 namespace UpdateTest
 {
@@ -76,8 +75,6 @@ namespace UpdateTest
             button1.FlatStyle = FlatStyle.Flat;
             button1.FlatAppearance.BorderSize = 0;
             updater1.CheckForUpdates();
-
-           
         }
         private void button1_MouseDown(object sender, MouseEventArgs e)
         {
@@ -98,27 +95,9 @@ namespace UpdateTest
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string[] DataenFileEntries = Directory.GetFiles(@".");
-            foreach (string fileName in DataenFileEntries)
-            {
-                if (fileName.Contains(".old"))
-                {
-                    File.Delete(fileName);
-                }
-            }
-            Application.Exit();
+           Application.Exit();
         }
-        public void OnApplicationExit(object sender, EventArgs e)
-        {
-            string[] DataenFileEntries = Directory.GetFiles(@".");
-            foreach (string fileName in DataenFileEntries)
-            {
-                if (fileName.Contains(".old"))
-                {
-                    File.Delete(fileName);
-                }
-            }
-        }
+
         private void button4_Click(object sender, MouseEventArgs e)
         {
          

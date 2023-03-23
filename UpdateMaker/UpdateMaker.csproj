@@ -77,12 +77,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Launcher\Launcher.csproj">
-      <Project>{263350d4-014b-4fe4-9e89-66d33ead4396}</Project>
-      <Name>Launcher</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Updater\CrystalUpdater.csproj">
-      <Project>{55845cbe-0f5e-4ecf-b497-f139843d3d6e}</Project>
+    <ProjectReference Include="..\TutUpdater\CrystalUpdater.csproj">
+      <Project>{55845CBE-0F5E-4ECF-B497-F139843D3D6E}</Project>
       <Name>CrystalUpdater</Name>
     </ProjectReference>
   </ItemGroup>
