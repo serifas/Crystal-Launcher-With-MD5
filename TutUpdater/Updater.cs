@@ -52,7 +52,7 @@ namespace CrystalUpdater
                 else
                 {
 
-                    Process.Start(@"irp.exe");
+                    Process.Start(@"wow.exe");
                 }
             }
             catch (Exception e)

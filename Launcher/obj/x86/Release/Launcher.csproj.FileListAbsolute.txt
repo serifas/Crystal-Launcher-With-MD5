@@ -1,0 +1,16 @@
+C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\Launcher\bin\Release\Crystal Launcher.exe.config
+C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\Launcher\bin\Release\Crystal Launcher.exe
+C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\Launcher\bin\Release\Crystal Launcher.pdb
+C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\Launcher\bin\Release\Crystal Updater.dll
+C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\Launcher\bin\Release\HtmlAgilityPack.dll
+C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\Launcher\bin\Release\Crystal Updater.pdb
+C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\Launcher\bin\Release\HtmlAgilityPack.pdb
+C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\Launcher\bin\Release\HtmlAgilityPack.xml
+C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\Launcher\obj\x86\Release\Launcher.csproj.AssemblyReference.cache
+C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\Launcher\obj\x86\Release\UpdateTest.Form1.resources
+C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\Launcher\obj\x86\Release\UpdateTest.Properties.Resources.resources
+C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\Launcher\obj\x86\Release\Launcher.csproj.GenerateResource.cache
+C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\Launcher\obj\x86\Release\Launcher.csproj.CoreCompileInputs.cache
+C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\Launcher\obj\x86\Release\Launcher.csproj.CopyComplete
+C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\Launcher\obj\x86\Release\Crystal Launcher.exe
+C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\Launcher\obj\x86\Release\Crystal Launcher.pdb
