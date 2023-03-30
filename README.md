@@ -23,14 +23,23 @@ An auto updater and launcher for game clients.
 *Followed by the content of the formatted news*
 **Examples of text formatting for the news.txt file**
 \rtf1\ansi 
+
 \b Here is some bold text\b0\
+
 \line
+
 \i here is a new line with some italic text\i0
+
 \line
+
 \i \b here is some italic and bold text \i0 \b0
+
 \line
+
 \none here is some regular text \none
+
 \line
+
 \b http://awebsitelinkhere \b0
 
 
