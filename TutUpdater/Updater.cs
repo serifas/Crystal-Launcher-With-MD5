@@ -13,12 +13,10 @@ using CrystalUpdater.UI;
 using System.Resources;
 using System.Globalization;
 using System.Diagnostics;
-
 namespace CrystalUpdater
 {
     public class Updater : Component
     {
-        private const String LocalUpdateFile = @".\UpdateInfo.dat";
 
         public String UpdateUrl { get; set; }
 
@@ -29,13 +27,13 @@ namespace CrystalUpdater
                 CleanUp();
 
                 WebClient downloadClient = new WebClient();
-                downloadClient.DownloadFile(UpdateUrl, LocalUpdateFile);
+                downloadClient.DownloadFile(Config.UpdateURL, Config.LocalUpdateFile);
                 downloadClient.Dispose();
 
-                if (!File.Exists(LocalUpdateFile))
-                    throw new FileNotFoundException("The local update file is missing!", LocalUpdateFile);
+                if (!File.Exists(Config.LocalUpdateFile))
+                    throw new FileNotFoundException("The local update file is missing!", Config.LocalUpdateFile);
 
-                UpdateSaveFile localFile = DecodeSaveFile(LocalUpdateFile);
+                UpdateSaveFile localFile = DecodeSaveFile(Config.LocalUpdateFile);
 
                 Version localVersion = Assembly.GetEntryAssembly().GetName().Version;
                 Version onlineVersion = Version.Parse(localFile.VersionString);
@@ -46,7 +44,7 @@ namespace CrystalUpdater
                     {
 
 
-                        frmUpdater updateForm = new frmUpdater(localFile, GetPath(UpdateUrl));
+                        frmUpdater updateForm = new frmUpdater(localFile, GetPath(Config.UpdateURL));
                         updateForm.ShowDialog();                        
                     }
 
@@ -54,7 +52,7 @@ namespace CrystalUpdater
                 else
                 {
 
-                    Process.Start(@"wow.exe");
+                    Process.Start(@"irp.exe");
                 }
             }
             catch (Exception e)

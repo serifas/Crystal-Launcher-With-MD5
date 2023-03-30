@@ -6,3 +6,4 @@ C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\TutUpdater\obj\Debug\C
 C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\TutUpdater\obj\Debug\CrystalUpdater.csproj.CoreCompileInputs.cache
 C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\TutUpdater\obj\Debug\Prime Updater.dll
 C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\TutUpdater\obj\Debug\Prime Updater.pdb
+C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\TutUpdater\obj\Debug\CrystalUpdater.csproj.AssemblyReference.cache

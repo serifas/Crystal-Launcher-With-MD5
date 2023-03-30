@@ -7,22 +7,34 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.IO;
+using System.Net;
+using System.Web;
+using System.Runtime.Remoting.Channels;
+using System.Security.Policy;
 
 namespace UpdateTest
 {
     public partial class Form1 : Form
     {
 
-        public const int WM_NCLBUTTONDOWN = 0xA1;
-
-        [DllImportAttribute("user32.dll")]
-        public static extern int SendMessage(IntPtr hWnd,
-                         int Msg, int wParam, int lParam);
-        [DllImportAttribute("user32.dll")]
-        public static extern bool ReleaseCapture();
-
+        private bool mouseDown;
+        private Point lastLocation;
+        private string content;
         public Form1()
         {
+            WebClient client = new WebClient();
+            try
+            {
+                Stream stream = client.OpenRead(CrystalUpdater.Config.NewsURL);
+                StreamReader reader = new StreamReader(stream);
+                content = reader.ReadToEnd();
+            }
+            catch
+            {
+
+            }
+           
             InitializeComponent();
             this.TransparencyKey = Color.Green;
             button1.ForeColor = Color.Transparent;
@@ -49,17 +61,34 @@ namespace UpdateTest
             button3.FlatAppearance.BorderSize = 0;
             button3.FlatAppearance.MouseOverBackColor = Color.Transparent;
             button3.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            pictureBox2.MouseDown += new MouseEventHandler(pictureBox2_MouseDown);
+            pictureBox2.MouseUp += new MouseEventHandler(pictureBox2_MouseUp);
+            pictureBox2.MouseMove += new MouseEventHandler(pictureBox2_MouseMove);
+            var sb = new StringBuilder();
 
-
-
+            richTextBox1.Rtf = @"{" + content + "}";
         }
-        private void Form1_MouseDown(object sender,   System.Windows.Forms.MouseEventArgs e)
+        
+        private void pictureBox2_MouseDown(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
+            mouseDown = true;
+            lastLocation = e.Location;
+        }
+      
+        private void pictureBox2_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseDown)
             {
-                ReleaseCapture();
-                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+                this.Location = new Point(
+                    (this.Location.X - lastLocation.X) + e.X, (this.Location.Y - lastLocation.Y) + e.Y);
+
+                this.Update();
             }
+        }
+
+        private void pictureBox2_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseDown = false;
         }
         void button1_MouseEnter(object sender, EventArgs e)
         {
@@ -102,15 +131,37 @@ namespace UpdateTest
         {
          
         }
-        protected override void WndProc(ref Message m)
+       
+
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
-            base.WndProc(ref m);
-            if (m.Msg == WM_NCHITTEST)
-                m.Result = (IntPtr)(HT_CAPTION);
         }
 
-        private const int WM_NCHITTEST = 0x84;
-        private const int HT_CLIENT = 0x1;
-        private const int HT_CAPTION = 0x2;
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+      
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }

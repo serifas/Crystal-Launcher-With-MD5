@@ -9,8 +9,6 @@ C:\Users\Matthiee\Desktop\TutUpdater\UpdateMaker\obj\x86\Debug\UpdateMaker.exe
 C:\Users\Matthiee\Desktop\TutUpdater\UpdateMaker\obj\x86\Debug\UpdateMaker.pdb
 C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\UpdateMaker\bin\Debug\UpdateMaker.exe
 C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\UpdateMaker\bin\Debug\UpdateMaker.pdb
-C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\UpdateMaker\bin\Debug\Prime Updater.dll
-C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\UpdateMaker\bin\Debug\Prime Updater.pdb
 C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\UpdateMaker\obj\x86\Debug\UpdateMaker.csproj.AssemblyReference.cache
 C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\UpdateMaker\obj\x86\Debug\UpdateMaker.Form1.resources
 C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\UpdateMaker\obj\x86\Debug\UpdateMaker.Properties.Resources.resources
@@ -19,3 +17,5 @@ C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\UpdateMaker\obj\x86\De
 C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\UpdateMaker\obj\x86\Debug\UpdateMaker.csproj.CopyComplete
 C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\UpdateMaker\obj\x86\Debug\UpdateMaker.exe
 C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\UpdateMaker\obj\x86\Debug\UpdateMaker.pdb
+C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\UpdateMaker\bin\Debug\Crystal Updater.dll
+C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\UpdateMaker\bin\Debug\Crystal Updater.pdb

@@ -77,9 +77,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TutUpdater\CrystalUpdater.csproj">
+    <ProjectReference Include="..\TutUpdater\Updater.csproj">
       <Project>{55845CBE-0F5E-4ECF-B497-F139843D3D6E}</Project>
-      <Name>CrystalUpdater</Name>
+      <Name>Updater</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
