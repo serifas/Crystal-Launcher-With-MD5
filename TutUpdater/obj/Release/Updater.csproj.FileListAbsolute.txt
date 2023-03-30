@@ -1,9 +1,0 @@
-C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\TutUpdater\bin\Release\Crystal Updater.dll
-C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\TutUpdater\bin\Release\Crystal Updater.pdb
-C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\TutUpdater\obj\Release\Updater.csproj.AssemblyReference.cache
-C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\TutUpdater\obj\Release\CrystalUpdater.Properties.Resources.resources
-C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\TutUpdater\obj\Release\CrystalUpdater.UI.frmUpdater.resources
-C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\TutUpdater\obj\Release\Updater.csproj.GenerateResource.cache
-C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\TutUpdater\obj\Release\Updater.csproj.CoreCompileInputs.cache
-C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\TutUpdater\obj\Release\Crystal Updater.dll
-C:\Users\Preac\Documents\GitHub\Crystal-Launcher-With-MD5\TutUpdater\obj\Release\Crystal Updater.pdb

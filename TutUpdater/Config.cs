@@ -8,7 +8,7 @@ namespace CrystalUpdater
     public static class Config
     {
         public static string LocalUpdateFile = @".\UpdateInfo.dat";
-        public static string UpdateURL = "http://localhost/Updates/UpdateInfo.dat";
-        public static string NewsURL = "http://localhost/news.txt";
+        public static string UpdateURL = "http://localhost:8081/Updates/UpdateInfo.dat";
+        public static string NewsURL = "http://localhost:8081/news.txt";
     }
 }

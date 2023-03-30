@@ -18,11 +18,21 @@ An auto updater and launcher for game clients.
 
 
 
-*the news.txt file should aways start with*
-\rtf1\ansi 
+*The news.txt file should aways start with*
+
+*\rtf1\ansi*
+
 *Followed by the content of the formatted news*
+
+
+
+
+
+
 **Examples of text formatting for the news.txt file**
-\rtf1\ansi 
+
+
+\rtf1\ansi
 
 \b Here is some bold text\b0\
 
